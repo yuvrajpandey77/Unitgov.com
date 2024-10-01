@@ -793,26 +793,6 @@ summary::marker {
     }
 }
 
-/* For large desktop screens (15-23 inch monitors) */
-@media (max-width: 1200px) {
-    nav h1 {
-        font-size: 2vw;
-        margin-left: 100px;
-    }
-    .nav-part2 h4 {
-        font-size: 1.2vw;
-    }
-    #page1 h1 {
-        font-size: 60px;
-    }
-    #page1 p {
-        font-size: 1.2vw;
-    }
-    #moving-div .move img {
-        height: 1.5vw;
-    }
-}
-
 /* For tablets (medium-sized screens) */
 @media (max-width: 768px) {
     nav h1 {
