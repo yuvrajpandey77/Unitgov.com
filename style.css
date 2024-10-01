@@ -779,3 +779,97 @@ summary::marker {
     height: 100vh;
     background-color: #111;
 }
+
+
+
+
+
+@media (min-width: 1600px) {
+    nav h1 {
+        font-size: 1.4vw;
+    }
+    .nav-part2 h4 {
+        font-size: 1vw;
+    }
+}
+
+/* For large desktop screens (15-23 inch monitors) */
+@media (max-width: 1200px) {
+    nav h1 {
+        font-size: 2vw;
+        margin-left: 100px;
+    }
+    .nav-part2 h4 {
+        font-size: 1.2vw;
+    }
+    #page1 h1 {
+        font-size: 60px;
+    }
+    #page1 p {
+        font-size: 1.2vw;
+    }
+    #moving-div .move img {
+        height: 1.5vw;
+    }
+}
+
+/* For tablets (medium-sized screens) */
+@media (max-width: 768px) {
+    nav h1 {
+        font-size: 2.5vw;
+        margin-left: 50px;
+    }
+    .nav-part2 h4 {
+        font-size: 1.5vw;
+    }
+    #page1 h1 {
+        font-size: 50px;
+    }
+    #page1 p {
+        font-size: 1.5vw;
+    }
+    #moving-div {
+        width: 60%;
+    }
+    #moving-div .move img {
+        height: 2.5vw;
+    }
+}
+
+/* For mobile phones (small screens) */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 5vw;
+    }
+    nav h1 {
+        font-size: 4vw;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .nav-part2 h4 {
+        font-size: 2.5vw;
+        margin-bottom: 10px;
+    }
+    nav button {
+        padding: 10px 15px;
+        font-size: 3vw;
+    }
+    nav button svg {
+        height: 2.5vw;
+        margin-left: 1vw;
+    }
+    #page1 h1 {
+        font-size: 6vw;
+    }
+    #page1 p {
+        font-size: 3vw;
+    }
+    #moving-div {
+        width: 100%;
+    }
+    #moving-div .move img {
+        height: 4vw;
+    }
+}
