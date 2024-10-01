@@ -20,7 +20,9 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
     color: #0A0118; /* Optional: sets text color for visibility against the background */
     padding: 20px; /* Optional: adds some padding around the content */
-    margin-top: 80px;
+    margin-top: 12vh;
+    padding-top: 12vh;
+    min-height: calc(100vh - 12vh);
 }
 
 
