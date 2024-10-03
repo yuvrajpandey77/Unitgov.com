@@ -212,3 +212,59 @@ page3VideoAnimation()
 page6Animations()
 
 loadingAnimation()
+
+
+const savedLinks = [
+    { name: "Bihar 4 Year BED Entrance Exam Result 2024", url: "https://www.sarkariresult.com/2024/bihar-4yr-bed/" },
+    { name: "RBI Officer Grade B Phase I Marks, Cutoff 2024", url: "https://www.sarkariresult.com/bank/rbi-officer-gradeb-july24/" },
+    { name: "IBPS Clerk 14th Pre Result 2024", url: "https://www.sarkariresult.com/bank/ibps-clerk-14th-2024/" },
+    { name: "UP Ayush NEET UG Merit List 2024", url: "https://www.sarkariresult.com/2024/up-ayush-neet-ug/" },
+    // ... add more saved links as necessary
+];
+
+// Show suggestions based on user input
+function showSuggestions() {
+    const input = document.getElementById('search-input').value.toLowerCase();
+    const suggestionsContainer = document.getElementById('suggestions-container');
+    
+    // Clear any previous suggestions
+    suggestionsContainer.innerHTML = '';
+    
+    // Filter saved links based on the input
+    const filteredLinks = savedLinks.filter(link => link.name.toLowerCase().includes(input));
+    
+    if (input.length > 0 && filteredLinks.length > 0) {
+        // Show filtered saved links
+        filteredLinks.forEach(link => {
+            const suggestionItem = document.createElement('div');
+            suggestionItem.className = 'suggestion-item';
+            suggestionItem.innerHTML = `<a href="${link.url}" target="_blank">${link.name}</a>`;
+            suggestionsContainer.appendChild(suggestionItem);
+        });
+    } else {
+        // Add Google search option if no saved results match
+        const googleSuggestion = document.createElement('div');
+        googleSuggestion.className = 'suggestion-item';
+        googleSuggestion.innerHTML = `<a href="https://www.google.com/search?q=${input}" target="_blank">Search Google for "${input}"</a>`;
+        suggestionsContainer.appendChild(googleSuggestion);
+    }
+
+    // Display the suggestions container if there are suggestions
+    suggestionsContainer.style.display = filteredLinks.length > 0 || input.length > 0 ? 'block' : 'none';
+}
+
+// Handle the search button click
+document.getElementById('search-button').addEventListener('click', function() {
+    const input = document.getElementById('search-input').value.toLowerCase();
+    
+    // Check if any saved link matches the input exactly
+    const match = savedLinks.find(link => link.name.toLowerCase() === input);
+    
+    if (match) {
+        // Redirect to the matched link
+        window.open(match.url, '_blank');
+    } else {
+        // Redirect to Google search if no exact match
+        window.open(`https://www.google.com/search?q=${input}`, '_blank');
+    }
+});
