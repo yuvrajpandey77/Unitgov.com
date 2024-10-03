@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNITGOV.COM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="style.css">
@@ -19,45 +25,42 @@
                 <h5><span>Linkedin</span></h5>
             </div>
             <div class="nav-elem">
-                <h4>Areas of expertise</h4>
-                <h5><span>AI & ML</span></h5>
+                <h4>Results</h4>
+                <!-- Add Results here -->
+                <h5><span><a href="https://www.sarkariresult.com/2024/bihar-4yr-bed/">Bihar 4 Year BED Entrance Exam Result 2024</a></span></h5>
+                <h5><span><a href="https://www.sarkariresult.com/bank/rbi-officer-gradeb-july24/">RBI Officer Grade B Phase I Marks, Cutoff 2024</a></span></h5>
+                <h5><span><a href="https://www.sarkariresult.com/bank/ibps-clerk-14th-2024/">IBPS Clerk 14th Pre Result 2024</a></span></h5>
+                <h5><span><a href="https://www.sarkariresult.com/2024/up-ayush-neet-ug/">UP Ayush NEET UG Merit List 2024</a></span></h5>
+                <h5><span><a href="https://www.sarkariresult.com/upsc/upsc-cpf-ac-2023/">UPSC CPF AC 2023 Reserve List</a></span></h5>
+            </div>
+            <div class="nav-elem">
+                <h4>Important</h4>
+                <h5><span>Important</span></h5>
+                <h5><span>Real Estate</span></h5>
+                <h5><span>E-commerce</span></h5>
+                <h5><span>Web 3</span></h5>
+            </div>
+            <div class="nav-elem">
+                <h4>Bihar</h4>
                 <h5><span>Fintech</span></h5>
                 <h5><span>Real Estate</span></h5>
                 <h5><span>E-commerce</span></h5>
                 <h5><span>Web 3</span></h5>
             </div>
             <div class="nav-elem">
-                <h4>UIUX Design</h4>
-                <h5><span>Fintech</span></h5>
-                <h5><span>Real Estate</span></h5>
+                <h4>Upsc</h4>
                 <h5><span>E-commerce</span></h5>
                 <h5><span>Web 3</span></h5>
             </div>
             <div class="nav-elem">
-                <h4>Product design</h4>
-                <h5><span>Fintech</span></h5>
-                <h5><span>Real Estate</span></h5>
-                <h5><span>E-commerce</span></h5>
-                <h5><span>Web 3</span></h5>
-            </div>
-            <div class="nav-elem">
-                <h4>Design Process</h4>
-                <h5><span>E-commerce</span></h5>
-                <h5><span>Web 3</span></h5>
-            </div>
-            <div class="nav-elem">
-                <h4>About Agency</h4>
+                <h4>SSC</h4>
                 <h5><span>Fintech</span></h5>
                 <h5><span>Real Estate</span></h5>
                 <h5></h5>
                 <h5><span>Web 3</span></h5>
             </div>
         </div>
-        <button>Let's Talk <svg fill="none" viewBox="0 0 20 20">
-                <path fill="#fff"
-                    d="M2.5 14.375V17.5h3.125l9.217-9.217-3.125-3.125L2.5 14.375Zm14.758-8.508a.83.83 0 0 0 0-1.175l-1.95-1.95a.83.83 0 0 0-1.175 0l-1.525 1.525 3.125 3.125 1.525-1.525Z">
-                </path>
-            </svg></button>
+        <button>Let's Talk</button>
         <div id="nav-bottom"></div>
     </nav>
     <div id="main">
@@ -67,11 +70,13 @@
         
 
             <!-- Search Section -->
-            <div id="search-container">
-                <input type="text" id="search-input" placeholder="Type your search here...">
-                <button id="search-button">Search</button>
-            </div>
-            <!-- Add the video element here -->
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Type your search here..." oninput="showSuggestions()">
+        <button id="search-button">Search</button>
+    <!-- Dropdown for search suggestions -->
+        <div id="suggestions-container"></div>
+    </div>
+
             
         </div>
         
@@ -100,15 +105,6 @@
             </div>
         </div>
 
-        <div id="page3">
-            <video src="https://via.placeholder.com/400x200"></video>
-            <div class="page3-center">
-                <div class="icon">
-                    <i class="ri-play-fill"></i>
-                </div>
-                <h5>Watch Showreel</h5>
-            </div>
-        </div>
 
         <div id="page4">
             <div class="section">
